@@ -1,7 +1,9 @@
 linux-dash
 ==========
 
-<a href="http://afaq.dreamhosters.com/linux-dash/">- View Demo -</a>
+This fork removes the PHP dependency and replaces it with a Python script that must be executed outside of the context of the application.
+
+--
 
 A drop-in, low-overhead monitoring web dashboard for a linux machine.
 

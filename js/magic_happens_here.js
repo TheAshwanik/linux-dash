@@ -51,7 +51,7 @@
     
     function get_ps(){
         
-        $.get( "sh/ps.php", function( data ) {
+        $.get( "api/ps.json", function( data ) {
            
         	destroy_dataTable('ps_dashboard');
         	
@@ -82,7 +82,7 @@
     
     function get_users(){
         
-        $.get( "sh/users.php", function( data ) {
+        $.get( "api/users.json", function( data ) {
           
             destroy_dataTable('users_dashboard');
             
@@ -108,7 +108,7 @@
     }
     
     function get_ram(){
-        $.get( "sh/mem.php", function( data ) {
+        $.get( "api/mem.json", function( data ) {
           var ram_total = data[1];
           var ram_used = parseInt( (data[2]/ram_total)*100);
           var ram_free = parseInt( (data[3]/ram_total)*100);
@@ -125,7 +125,7 @@
 
     function get_df(){
         
-        $.get( "sh/df.php", function( data ) {
+        $.get( "api/df.json", function( data ) {
           
             var table = $('#df_dashboard');
             
@@ -157,7 +157,7 @@
     
     function get_whereis(){
         
-        $.get( "sh/whereis.php", function( data ) {
+        $.get( "api/whereis.json", function( data ) {
           
             var table = $('#whereis_dashboard');
             
@@ -184,13 +184,13 @@
     }
     
     function get_os_info(){ 
-        generate_os_data('sh/issue.php','#os-info');
-        generate_os_data('sh/hostname.php','#os-hostname');
-        generate_os_data('sh/uptime.php','#os-uptime');
+        generate_os_data('api/issue.json','#os-info');
+        generate_os_data('api/hostname.json','#os-hostname');
+        generate_os_data('api/uptime.json','#os-uptime');
     }
     
     function get_ip(){
-        $.get( 'sh/ip.php', function( data ) {
+        $.get( 'api/ip.json', function( data ) {
             
             destroy_dataTable('ip_dashboard');
             
